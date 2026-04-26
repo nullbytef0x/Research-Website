@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Dashboard - Final Year Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Shield shape -->
+                    <path d="M25 5 L40 10 L40 25 Q40 40 25 45 Q10 40 10 25 L10 10 Z" fill="url(#logoGradient)" stroke="none"/>
+                    <!-- Lock icon -->
+                    <rect x="20" y="22" width="10" height="8" rx="1" fill="white" opacity="0.9"/>
+                    <path d="M21 22 L21 19 Q21 16 25 16 Q29 16 29 19 L29 22" stroke="white" stroke-width="2" fill="none" opacity="0.9"/>
+                    <!-- Keyhole -->
+                    <circle cx="25" cy="25" r="1.5" fill="#667eea"/>
+                    <rect x="24.2" y="25" width="1.6" height="3" fill="#667eea"/>
+                </svg>
+                <span class="logo-text">Invisiguard</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="#introduction" class="dropdown-toggle">Project Scope ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#literature-survey">Literature Survey</a></li>
+                        <li><a href="#problem-solution">Problem &amp; Solution</a></li>
+                        <li><a href="#objectives">Objectives</a></li>
+                        <li><a href="#methodology">Methodology</a></li>
+                    </ul>
+                </li>
+                <li><a href="#milestones">Milestones</a></li>
+                <li><a href="#downloads">Downloads</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">InvisiGuard</h1>
+                <p class="hero-subtitle">Intelligent System for Predicting Cyber Threats Real Time</p>
+                <p class="hero-description">A next-generation, machine learning-based cybersecurity system designed to predict and prevent both known and zero-day attacks through proactive, intelligence-driven threat detection.</p>
+                <a href="#introduction" class="btn-primary">Explore Research</a>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction" class="section section-alt scope-section">
+            <div class="container scope-container">
+                <h2 class="scope-heading">Introduction</h2>
+                <div class="scope-copy">
+                    <p>Cybersecurity threats are becoming more common, sophisticated, and harder to spot using traditional protection methods. Most current systems still depend on signature-based detection, which works well for known attacks but struggles against new, changing, and previously unseen threats, like zero-day attacks. In today's digital environments, threats can emerge from unusual network traffic, suspicious activity on endpoints, harmful system calls or strange user actions. Therefore, depending on a single data source or detection model is no longer enough for effective cyber defense.</p>
+                    <p>This research presents a Real Time Cyber Threats Predicting System that uses machine learning to enhance proactive cybersecurity detection. The project combines four key analysis areas: system call patterns, user behavior patterns, network traffic patterns and Windows endpoint log patterns. By bringing together these different security perspectives, the system aims to predict both known attacks and zero-day threats more effectively than traditional methods. The goal is to create a more flexible, intelligence-based, behavior-driven cybersecurity framework that can support real-time monitoring and early threat detection.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Literature Survey Section -->
+        <section id="literature-survey" class="section scope-section">
+            <div class="container scope-container">
+                <h2 class="scope-heading">Literature Survey</h2>
+                <div class="literature-layout">
+                    <div class="literature-media">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Cybersecurity threat detection and machine learning illustration" loading="lazy">
+                    </div>
+                    <div class="literature-copy">
+                        <p>Existing literature shows that machine learning has become an important approach in cybersecurity. It allows systems to learn patterns of normal and malicious behavior instead of depending only on fixed rules. Previous studies have explored several directions, such as autoencoders for anomaly detection, Isolation Forest for identifying unusual data points, LSTM and RNN models for sequence-based behavioral analysis and XGBoost and Random Forest for classification tasks. Research has also shown that endpoint logs, user activity, network traffic, and process-level traces each provide valuable but different types of threat intelligence.</p>
+                        <p>However, the literature highlights several limitations. Many earlier approaches focus on only one data source, such as network traffic or user behavior. This reduces their ability to capture the full picture of cyber threats. Some single-model methods suffer from high false positive rates, limited contextual understanding, or poor performance when dealing with complex and evolving attack patterns. These gaps suggest the need for a more integrated and multi-layered solution. Based on this, the current research builds on previous machine learning studies by combining multiple components into one unified framework. This allows better prediction of both known and unknown cyber threats in real time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Problem & Solution Section -->
+        <section id="problem-solution" class="section section-alt scope-section">
+            <div class="container scope-container">
+                <h2 class="scope-heading">Research Problem &amp; Solution</h2>
+
+                <div class="problem-layout">
+                    <div class="problem-copy">
+                        <h3 class="scope-subheading">Problem Statement</h3>
+                        <p class="scope-highlight">How to proactively predict and prevent known and zero-day cyberattacks using intelligent behavioral analysis, overcoming the limitations of signature-based detection and reactive security systems?</p>
+                        <p>Modern organizations face significant cybersecurity challenges due to the increasing complexity and sophistication of cyber threats. Traditional security systems rely heavily on predefined signatures and static rules, making them ineffective against evolving attack patterns and completely incapable of detecting zero-day threats. Additionally, the lack of real-time behavioral analysis across system calls, user activities, network traffic, and endpoint logs leads to delayed threat detection and increased vulnerability. These limitations result in higher risks, slower response times, and an inability to proactively defend against emerging cyber threats, highlighting the urgent need for an intelligent and predictive security solution.</p>
+                    </div>
+
+                    <figure class="scope-video">
+                        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Product Demonstration - Solution" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <figcaption>Product Demonstration - Solution</figcaption>
+                    </figure>
+                </div>
+
+                <div class="solution-block">
+                    <h3 class="scope-subheading">Proposed Solution</h3>
+                    <p>InvisiGuard is an advanced, machine learning-driven cybersecurity system designed to proactively predict and prevent both known and zero-day attacks. Unlike traditional reactive security solutions, InvisiGuard integrates multiple intelligent models to analyze diverse data sources, including system call patterns, user behavioral activities, network traffic flows, and endpoint logs.</p>
+                    <p>The system leverages a hybrid approach combining supervised learning techniques such as Random Forest and Support Vector Machines (SVM) for detecting known threats, alongside unsupervised models like Autoencoders and Isolation Forest for identifying previously unseen anomalies. This multi-layered architecture enables continuous learning and adaptation to evolving attack patterns.</p>
+                    <p>InvisiGuard processes data in real time, extracting critical features and identifying deviations from normal behavior that may indicate malicious activity. These detections are then mapped against the MITRE ATT&CK framework, allowing the system to classify threats based on known adversarial tactics, techniques, and procedures (TTPs). This mapping provides deeper contextual understanding of attacks, helping organizations not only detect threats but also understand how they occur and what stage of the attack lifecycle they belong to.</p>
+                    <p>A centralized intelligence engine correlates insights from all components and generates actionable outputs, including real-time alerts, risk scoring, attack path visualization, and automated mitigation strategies. By aligning detections with industry-standard threat intelligence frameworks, InvisiGuard enhances interpretability, improves incident response, and supports security teams in making faster, more informed decisions.</p>
+                    <p>Through an intuitive dashboard, users can monitor system activity, investigate threats, and respond proactively. By transforming cybersecurity from a reactive to a predictive and intelligence-driven model, InvisiGuard significantly improves detection accuracy, reduces response time, and strengthens organizational resilience against modern cyber threats.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objectives Section -->
+        <section id="objectives" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Research Objectives</h2>
+                <div class="objectives-timeline">
+                    <div class="timeline-item-obj left">
+                        <div class="timeline-content-obj">
+                            <h3>System Call Pattern Analysis</h3>
+                            <p>Predict known attacks by analyzing system call patterns using a two-stage hybrid system. Stage 1 uses Random Forest/SVM as a fast filter, while Stage 2 employs RNN/LSTM for deep analysis of suspicious sequences, including arguments, return values, and timing.</p>
+                        </div>
+                        <div class="timeline-marker-obj">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="timeline-item-obj right">
+                        <div class="timeline-content-obj">
+                            <h3>User Behavioral Monitoring</h3>
+                            <p>Predict known insider attacks using behavioral graph construction and analysis. Monitor login patterns, file access, web browsing history, and network interactions to establish baseline models and identify anomalous behaviors using Random Forest.</p>
+                        </div>
+                        <div class="timeline-marker-obj">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="timeline-item-obj left">
+                        <div class="timeline-content-obj">
+                            <h3>Network Traffic Analysis</h3>
+                            <p>Predict zero-day attacks through advanced unsupervised machine learning techniques (Autoencoders and Isolation Forest) applied to network traffic patterns. Focus on packet-level details and flow statistics to detect anomalies with near 99% accuracy.</p>
+                        </div>
+                        <div class="timeline-marker-obj">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="timeline-item-obj right">
+                        <div class="timeline-content-obj">
+                            <h3>Endpoint Log Inspection</h3>
+                            <p>Predict zero-day attacks by analyzing endpoint log patterns using Isolation Forests. Extract granular details from Sysmon logs including process creation, command-line arguments, file hashes, registry keys, and file integrity changes for high-accuracy anomaly detection.</p>
+                        </div>
+                        <div class="timeline-marker-obj">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology Section -->
+        <section id="methodology" class="section">
+            <div class="container">
+                <h2 class="section-title">Methodology</h2>
+                <div class="methodology-content">
+                    <figure class="methodology-figure">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="High-level architecture and process workflow illustration" loading="lazy">
+                        <figcaption>Figure 2. High Level Architecture of the InvisiGuard System.</figcaption>
+                    </figure>
+
+                    <div class="methodology-text">
+                        <p class="methodology-lead">The proposed InvisiGuard Intelligent Threat Prediction System consists of 4 main components. They are:</p>
+                        <ol class="methodology-list">
+                            <li><strong>System Call Analysis Component</strong></li>
+                            <li><strong>User Behavior Analysis Component</strong></li>
+                            <li><strong>Network Traffic Analysis Component</strong></li>
+                            <li><strong>Endpoint Log Analysis Component</strong></li>
+                        </ol>
+
+                        <p>The operation of this comprehensive threat prediction system is illustrated by the following process. The System Call Analysis Component monitors low-level interactions between applications and the operating system, identifying suspicious patterns that indicate known attack behaviors. Simultaneously, the User Behavior Analysis Component analyzes user activities such as login patterns, file access, and device usage to detect deviations from normal behavior.</p>
+
+                        <p>The Network Traffic Analysis Component examines packet-level and flow-level data to identify anomalies and unusual communication patterns that may signal potential zero-day attacks. In parallel, the Endpoint Log Analysis Component processes system logs, tracking events such as process creation, resource utilization, and file integrity changes to uncover hidden threats at the endpoint level.</p>
+
+                        <p>The outputs from these components are then integrated into a centralized intelligence engine, where machine learning models classify threats and detect anomalies in real time. Detected activities are further mapped to the MITRE ATT&amp;CK framework to identify attack techniques, tactics, and stages within the attack lifecycle. Based on this analysis, the system generates actionable insights, including alerts, risk scores, and automated mitigation strategies.</p>
+
+                        <p>This integrated architecture enables organizations to proactively detect and predict both known and zero-day attacks, improving detection accuracy, reducing response time, and strengthening overall cybersecurity resilience.</p>
+                    </div>
+                </div>
+
+                <div class="tech-showcase">
+                    <h3 class="tech-stack-title">Technologies Used</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" loading="lazy">
+                            </div>
+                            <p>Python</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg" alt="OpenAI logo" loading="lazy">
+                            </div>
+                            <p>Open AI APIs</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML logo" loading="lazy">
+                            </div>
+                            <p>HTML</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS logo" loading="lazy">
+                            </div>
+                            <p>CSS</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo" loading="lazy">
+                            </div>
+                            <p>JavaScript</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub logo" loading="lazy">
+                            </div>
+                            <p>GitHub</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <circle cx="50" cy="50" r="14" fill="#f97316"/>
+                                    <circle cx="26" cy="50" r="6" fill="#38bdf8"/>
+                                    <circle cx="38" cy="26" r="6" fill="#38bdf8"/>
+                                    <circle cx="74" cy="50" r="6" fill="#38bdf8"/>
+                                    <circle cx="62" cy="74" r="6" fill="#38bdf8"/>
+                                    <line x1="26" y1="50" x2="50" y2="50" stroke="#60a5fa" stroke-width="4"/>
+                                    <line x1="38" y1="26" x2="50" y2="50" stroke="#60a5fa" stroke-width="4"/>
+                                    <line x1="74" y1="50" x2="50" y2="50" stroke="#60a5fa" stroke-width="4"/>
+                                    <line x1="62" y1="74" x2="50" y2="50" stroke="#60a5fa" stroke-width="4"/>
+                                </svg>
+                            </div>
+                            <p>Networkx</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="Visual Studio Code logo" loading="lazy">
+                            </div>
+                            <p>Visual Studio Code</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib logo" loading="lazy">
+                            </div>
+                            <p>Matplotlib</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="https://cdn.simpleicons.org/anaconda/44a833" alt="Anaconda logo" loading="lazy">
+                            </div>
+                            <p>Anaconda</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab logo" loading="lazy">
+                            </div>
+                            <p>GitLab</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" alt="PyCharm logo" loading="lazy">
+                            </div>
+                            <p>PyCharm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Milestones Section -->
+        <section id="milestones" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Project Milestones</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Project Proposal</h3>
+                            <p class="timeline-date">Month 1-2</p>
+                            <p>Initial research, problem identification, and proposal submission. Literature review and feasibility study completed.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Design Phase</h3>
+                            <p class="timeline-date">Month 3-4</p>
+                            <p>System architecture design, component specification, and technology selection. Prototype development initiated.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Implementation</h3>
+                            <p class="timeline-date">Month 5-8</p>
+                            <p>Core system development, module integration, and iterative testing. Regular progress reviews and adjustments.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Testing & Evaluation</h3>
+                            <p class="timeline-date">Month 9-10</p>
+                            <p>Comprehensive testing, performance evaluation, and validation against objectives. Bug fixes and optimization.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Final Presentation</h3>
+                            <p class="timeline-date">Month 11-12</p>
+                            <p>Documentation completion, final report submission, and project presentation. Demonstration of working system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloads Section -->
+        <section id="downloads" class="section downloads-section">
+            <div class="container">
+                <div class="downloads-intro">
+                    <p class="downloads-kicker">Downloads</p>
+                    <h2 class="downloads-heading">Documents</h2>
+                    <p class="downloads-description">Please find all documents related to this project below.</p>
+                </div>
+
+                <div class="downloads-grid">
+                    <article class="download-file-card">
+                        <div class="download-file-body">
+                            <h3><span class="download-file-icon" aria-hidden="true">📄</span> Topic Assessment</h3>
+                            <p class="download-file-date">Submitted on 2024/01/31</p>
+                        </div>
+                        <div class="download-file-footer">
+                            <span>Group</span>
+                            <a href="#">Download</a>
+                        </div>
+                    </article>
+
+                    <article class="download-file-card">
+                        <div class="download-file-body">
+                            <h3><span class="download-file-icon" aria-hidden="true">📄</span> Project Proposal</h3>
+                            <p class="download-file-date">Submitted on 2024/02/29</p>
+                        </div>
+                        <div class="download-file-footer">
+                            <span>Individual</span>
+                            <a href="#">Download</a>
+                        </div>
+                    </article>
+
+                    <article class="download-file-card">
+                        <div class="download-file-body">
+                            <h3><span class="download-file-icon" aria-hidden="true">📄</span> Status Documents I</h3>
+                            <p class="download-file-date">Submitted on 2024/05/06</p>
+                        </div>
+                        <div class="download-file-footer">
+                            <span>Individual</span>
+                            <a href="#">Download</a>
+                        </div>
+                    </article>
+
+                    <article class="download-file-card">
+                        <div class="download-file-body">
+                            <h3><span class="download-file-icon" aria-hidden="true">📄</span> Status Documents II</h3>
+                            <p class="download-file-date">Submitted on 2024/09/11</p>
+                        </div>
+                        <div class="download-file-footer">
+                            <span>Individual</span>
+                            <a href="#">Download</a>
+                        </div>
+                    </article>
+
+                    <article class="download-file-card">
+                        <div class="download-file-body">
+                            <h3><span class="download-file-icon" aria-hidden="true">📄</span> Research Paper</h3>
+                            <p class="download-file-date">Submitted on 2024/06/14</p>
+                        </div>
+                        <div class="download-file-footer">
+                            <span>Group</span>
+                            <a href="#">Download</a>
+                        </div>
+                    </article>
+
+                    <article class="download-file-card">
+                        <div class="download-file-body">
+                            <h3><span class="download-file-icon" aria-hidden="true">📄</span> Final Report</h3>
+                            <p class="download-file-date">Submitted on 2024/08/22</p>
+                        </div>
+                        <div class="download-file-footer">
+                            <span>Individual</span>
+                            <a href="#">Download</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="downloads-subheading">
+                    <h2 class="downloads-heading">Presentations</h2>
+                    <p class="downloads-description">Please find all presentations related this project below.</p>
+                </div>
+
+                <div class="downloads-grid">
+                    <article class="download-file-card">
+                        <div class="download-file-body">
+                            <h3><span class="download-file-icon download-file-icon-ppt" aria-hidden="true">📊</span> Project Proposal</h3>
+                            <p class="download-file-date">Submitted on 2024/02/20</p>
+                        </div>
+                        <div class="download-file-footer">
+                            <span>Group</span>
+                            <a href="#">Download</a>
+                        </div>
+                    </article>
+
+                    <article class="download-file-card">
+                        <div class="download-file-body">
+                            <h3><span class="download-file-icon" aria-hidden="true">📄</span> Progress Presentation I</h3>
+                            <p class="download-file-date">Submitted on 2024/05/05</p>
+                        </div>
+                        <div class="download-file-footer">
+                            <span>Group</span>
+                            <a href="#">Download</a>
+                        </div>
+                    </article>
+
+                    <article class="download-file-card">
+                        <div class="download-file-body">
+                            <h3><span class="download-file-icon" aria-hidden="true">📄</span> Progress Presentation II</h3>
+                            <p class="download-file-date">Submitted on 2024/09/09</p>
+                        </div>
+                        <div class="download-file-footer">
+                            <span>Group</span>
+                            <a href="#">Download</a>
+                        </div>
+                    </article>
+
+                    <article class="download-file-card">
+                        <div class="download-file-body">
+                            <h3><span class="download-file-icon" aria-hidden="true">📄</span> Final Presentation</h3>
+                            <p class="download-file-date">To be submitted</p>
+                        </div>
+                        <div class="download-file-footer">
+                            <span>Group</span>
+                            <span class="download-file-pending">Pending</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="images/it22343116.jpeg" alt="Nawarathna N.M.I.M">
+                        </div>
+                        <h3>Nawarathna N.M.I.M</h3>
+                        <span class="team-badge">Group Leader</span>
+                        <p class="team-level">Undergraduate</p>
+                        <p class="team-university">Sri Lanka Institute of Information Technology</p>
+                        <p class="team-department"><strong>Department</strong><br>Information Systems Engineering</p>
+                        <div class="team-links">
+                            <a href="#" class="team-link">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" fill="#0077B5"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a href="#" class="team-link">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#10b981"/>
+                                </svg>
+                                E-Mail
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="images/It22562906.png" alt="Pallewaththa P.A">
+                        </div>
+                        <h3>Pallewaththa P.A</h3>
+                        <span class="team-badge member">Group Member</span>
+                        <p class="team-level">Undergraduate</p>
+                        <p class="team-university">Sri Lanka Institute of Information Technology</p>
+                        <p class="team-department"><strong>Department</strong><br>Information Systems Engineering</p>
+                        <div class="team-links">
+                            <a href="#" class="team-link">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" fill="#0077B5"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a href="#" class="team-link">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#10b981"/>
+                                </svg>
+                                E-Mail
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="images/it22117496.png" alt="Nawarathna N.P.D.T">
+                        </div>
+                        <h3>Nawarathna N.P.D.T</h3>
+                        <span class="team-badge member">Group Member</span>
+                        <p class="team-level">Undergraduate</p>
+                        <p class="team-university">Sri Lanka Institute of Information Technology</p>
+                        <p class="team-department"><strong>Department</strong><br>Information Systems Engineering</p>
+                        <div class="team-links">
+                            <a href="#" class="team-link">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" fill="#0077B5"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a href="#" class="team-link">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#10b981"/>
+                                </svg>
+                                E-Mail
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="images/It22562906.png" alt="Nethkalum G.M.H">
+                        </div>
+                        <h3>Nethkalum G.M.H</h3>
+                        <span class="team-badge member">Group Member</span>
+                        <p class="team-level">Undergraduate</p>
+                        <p class="team-university">Sri Lanka Institute of Information Technology</p>
+                        <p class="team-department"><strong>Department</strong><br>Information Systems Engineering</p>
+                        <div class="team-links">
+                            <a href="#" class="team-link">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" fill="#0077B5"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a href="#" class="team-link">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#10b981"/>
+                                </svg>
+                                E-Mail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>Have questions about InvisiGuard or our cybersecurity research? We'd love to hear from you and discuss our intelligent threat prediction system.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong>Email:</strong>
+                                <p>info@invisiguard.com</p>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Phone:</strong>
+                                <p>Contact via university</p>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Location:</strong>
+                                <p>Sri Lanka Institute of Information Technology<br>Department of Cybersecurity<br>Malabe, Sri Lanka</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 InvisiGuard - Intelligent Cyber Threat Prediction System. All rights reserved.</p>
+                <p>Final Year Project - Information Assurance & Security | Project ID: 25-26J-062</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const nav = document.getElementById('navbar');
+            const navLinks = Array.from(document.querySelectorAll('.nav-menu a[href^="#"]'));
+            const sectionIds = Array.from(new Set(navLinks.map((link) => link.getAttribute('href').slice(1))));
+            const sections = sectionIds
+                .map((id) => document.getElementById(id))
+                .filter(Boolean);
+
+            if (!sections.length) {
+                return;
+            }
+
+            let activeSectionId = '';
+            let ticking = false;
+
+            function setActiveLinks(sectionId) {
+                navLinks.forEach((link) => {
+                    const isActive = link.getAttribute('href') === '#' + sectionId;
+                    link.classList.toggle('active', isActive);
+                });
+            }
+
+            function updateSectionState(sectionId) {
+                if (!sectionId || sectionId === activeSectionId) {
+                    return;
+                }
+
+                activeSectionId = sectionId;
+                setActiveLinks(sectionId);
+
+                const nextHash = '#' + sectionId;
+                if (window.location.hash !== nextHash) {
+                    history.replaceState(null, '', nextHash);
+                }
+            }
+
+            function getCurrentSectionId() {
+                const navHeight = nav ? nav.offsetHeight : 0;
+                const checkLine = window.scrollY + navHeight + 140;
+                let currentId = sections[0].id;
+
+                sections.forEach((section) => {
+                    if (section.offsetTop <= checkLine) {
+                        currentId = section.id;
+                    }
+                });
+
+                return currentId;
+            }
+
+            function onScroll() {
+                if (ticking) {
+                    return;
+                }
+
+                ticking = true;
+                window.requestAnimationFrame(function () {
+                    updateSectionState(getCurrentSectionId());
+                    ticking = false;
+                });
+            }
+
+            navLinks.forEach((link) => {
+                link.addEventListener('click', function () {
+                    const sectionId = this.getAttribute('href').slice(1);
+                    updateSectionState(sectionId);
+                });
+            });
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+
+            const initialHash = window.location.hash.slice(1);
+            if (initialHash && sectionIds.includes(initialHash)) {
+                updateSectionState(initialHash);
+            } else {
+                updateSectionState(getCurrentSectionId());
+            }
+        })();
+    </script>
+</body>
+</html>
