@@ -1034,6 +1034,21 @@ img {
     }
 }
 
+
+/* Supervisor Section Center Alignment */
+#supervisors .team-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#supervisors .team-card {
+    max-width: 320px;
+    width: 100%;
+}
+
 /* ===================================
    Team Section
    =================================== */
